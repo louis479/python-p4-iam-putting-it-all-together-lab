@@ -42,6 +42,8 @@ with app.app_context():
 
     db.session.add_all(users)
 
+    db.session.commit()
+
     print("Creating recipes...")
     recipes = []
     for i in range(100):
@@ -51,6 +53,7 @@ with app.app_context():
             title=fake.sentence(),
             instructions=instructions,
             minutes_to_complete=randint(15,90),
+            user=rc(users)
         )
 
         recipe.user = rc(users)
