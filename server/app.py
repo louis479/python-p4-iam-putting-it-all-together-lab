@@ -142,11 +142,11 @@ class RecipeIndex(Resource):
             return {'errors': [str(e)]}, 422
 
 
-api.add_resource(Signup, '/signup', endpoint='signup')
-api.add_resource(CheckSession, '/check_session', endpoint='check_session')
-api.add_resource(Login, '/login', endpoint='login')
-api.add_resource(Logout, '/logout', endpoint='logout')
-api.add_resource(RecipeIndex, '/recipes', endpoint='recipes')
+# api.add_resource(Signup, '/signup', endpoint='signup')
+# api.add_resource(CheckSession, '/check_session', endpoint='check_session')
+# api.add_resource(Login, '/login', endpoint='login')
+# api.add_resource(Logout, '/logout', endpoint='logout')
+# api.add_resource(RecipeIndex, '/recipes', endpoint='recipes')
 
 
 if __name__ == '__main__':
